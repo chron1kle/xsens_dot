@@ -96,7 +96,7 @@ class Dot:
         # Output file path for any data needs to be recorded
         self.logFileName = f"rec_{srl}.txt"
         self.errorLogFileName = f"error_{srl}.log"
-        self.compensationDictName = f"cpst_{srl}.dict"
+        self.compensationDictName = f"./Sources/cpst_{srl}.dict"
         self.cpstDict = self.load_compensation()
 
         with open(self.logFileName, '+w'):  # clear the output file and ready for data recording
