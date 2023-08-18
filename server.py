@@ -66,7 +66,7 @@ if __name__ == "__main__":
                     pkg_count += 1
                     print(f'\r{out}', end = '', flush=True)
                     
-                    try:
+                    try: # you can change the data to be shown in the chart right below
                         pic_fa.run(dotList[srl].fax_raw, 0)
                         pic_fa.run(dotList[srl].fay_raw, 1)
                         pic_fa.run(dotList[srl].faz_raw, 2)
@@ -76,6 +76,8 @@ if __name__ == "__main__":
                         pic_fa.run(dotList[srl].cali_vel['x'], 6)
                         pic_fa.run(dotList[srl].cali_vel['y'], 7)
                         pic_fa.run(dotList[srl].cali_vel['z'], 8)
+
+                        # you can change the data to be shown in the 3D plot right below
                         srvr.sending(f"{dotList[srl].fax} {dotList[srl].fay} {dotList[srl].faz}", (monitor_ip, 12570))
                         srvr.sending(f"{dotList[srl].cali_coor['x']} {dotList[srl].cali_coor['y']} {dotList[srl].cali_coor['z']}", (monitor_ip, 12571))
                         srvr.sending(f"{dotList[srl].ox} {dotList[srl].oy} {dotList[srl].oz}", (monitor_ip, 12572))
